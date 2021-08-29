@@ -1,6 +1,6 @@
 import Product from "./Product";
 
-export default function Desserts() {
+export default function Desserts({desserts, setDessert}) {
     
     const dessertsData = [
         {
@@ -44,12 +44,10 @@ export default function Desserts() {
 
     return (
         <>
-            <p className="general-titles">Por fim, sua sobremesa</p>
             <ul>
-                {dessertsData.map((dessert, index) => (<li className="item" key={index}>
-                    <Product image={dessert.image} name={dessert.name} description={dessert.description} price={dessert.price}/>
-                    </li>)
-                )}
+                {dessertsData.map((dessert, index) => (
+                    <Product key={index} image={dessert.image} name={dessert.name} description={dessert.description} price={dessert.price} chosen={desserts} func={setDessert}/>
+                ))}
             </ul>
         </>
     );

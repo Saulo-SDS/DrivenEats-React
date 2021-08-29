@@ -1,6 +1,6 @@
 import Product from "./Product";
 
-export default function Drinks() {
+export default function Drinks({drinks, setDrink}) {
 
     const drinksData = [
         {
@@ -44,12 +44,10 @@ export default function Drinks() {
 
     return (
         <>
-            <p className="general-titles">Agora, sua bebida</p>
             <ul>
-                {drinksData.map((drink, index) => (<li className="item" key={index}>
-                    <Product image={drink.image} name={drink.name} description={drink.description} price={drink.price}/>
-                    </li>)
-                )}
+                {drinksData.map((drink, index) => (
+                    <Product key={index} image={drink.image} name={drink.name} description={drink.description} price={drink.price} chosen={drinks} func={setDrink}/>
+                ))}
             </ul>
         </>
     );

@@ -78,7 +78,9 @@ ul {
 }
 
 ion-icon {
-    color: #ffffff;
+    position: absolute;
+    right: 0;
+    color: #32B72F;
     width: 15px;
     height: 15px;
     margin-top: 2px;
@@ -108,8 +110,9 @@ ion-icon {
     color: #000000;
 }
 
-.item{
+ul li{
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: center;
     width: 172px;
@@ -155,9 +158,7 @@ ion-icon {
     font-weight: 700;
 }
 
-.selected-food-option,
-.selected-drink-option,
-.selected-dessert-option {
+.selected-option {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),  inset 0px 0px 0px 5px #32B72F;
 }
 
@@ -179,6 +180,14 @@ ion-icon {
 
 .hide {
     display: none;
+}
+
+.invisible{
+    opacity: 0;
+}
+
+.price-option {
+    position: relative;
 }
 
 .confirm-order {
@@ -225,6 +234,28 @@ ion-icon {
     line-height: 26px;
     padding: 20px 0 15px 0;
     color: #FFFFFF;
+}
+
+.add{
+    display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+}
+
+.add span{
+    font-size: 16px;
+    padding: 2px 15px 0 15px;
+}
+
+.add span:first-child{
+    color: red;
+    cursor: pointer;
+}
+
+.add span:last-child{
+    color: green;
+    cursor: pointer;
 }
 
 .confirm{
