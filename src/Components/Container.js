@@ -1,3 +1,4 @@
+import BottomBar from "./ContainerComponents/BottomBar";
 import Products from "./ContainerComponents/Products";
 
 export default function Container ({foods, setFood, drinks, setDrink, desserts, setDessert}) {
@@ -9,6 +10,7 @@ export default function Container ({foods, setFood, drinks, setDrink, desserts, 
                 drinks={drinks} setDrink={setDrink} 
                 desserts={desserts} setDessert={setDessert}
             />
+            <BottomBar/>
         </div>
     );
 }
