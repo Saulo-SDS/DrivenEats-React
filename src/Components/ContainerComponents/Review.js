@@ -8,6 +8,7 @@ import {
   } from "react-router-dom";
 import Top from '../Top';
 import ItemInfo from './ItemInfo';
+import SendOrder from './SendOrder';
 
 export default function Review({foods, drinks, desserts}) {
 
@@ -30,7 +31,7 @@ export default function Review({foods, drinks, desserts}) {
                         </div>
             
                         <div class="confirm">
-                            <button  class="button-confirm" onClick={}>Tudo certo, pode pedir!</button>
+                            <button  class="button-confirm" onClick={() => SendOrder(foods, drinks, desserts, totalValue)}>Tudo certo, pode pedir!</button>
                             <Link class="button-cancel" onclick="cancelOrder();">Cancelar</Link>
                         </div>
                     </div>
