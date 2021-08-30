@@ -1,4 +1,4 @@
-import Products from "./ContainerComponents/Products";
+import Products from "./Products";
 
 export default function Container ({foods, setFood, drinks, setDrink, desserts, setDessert}) {
     

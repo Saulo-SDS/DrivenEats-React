@@ -3,8 +3,8 @@ export default function ItemInfo({name, price, amount}) {
     let description = name+` - ${amount}`;
     return (
         <div>
-            <p class="item-name">{description}</p>
-            <p class="item-price">{String(value).replace('.',',')}</p>
+            <p className="item-name">{description}</p>
+            <p className="item-price">{String(value).replace('.',',')}</p>
         </div>
     );
 }

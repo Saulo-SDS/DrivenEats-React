@@ -3,13 +3,11 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link,
-    useRouteMatch,
-    useParams
+    Link
   } from "react-router-dom";
-import Review from "./ContainerComponents/Review";
+import Review from "./Review";
 
-export default function({foods, drinks, desserts}) {
+export default function BottomBar({foods, drinks, desserts}) {
 
     let isValid = (foods.length > 0 && drinks.length > 0  && desserts.length > 0);
    
@@ -22,10 +20,10 @@ export default function({foods, drinks, desserts}) {
                     </Link>
                 </div>
                 <Switch>
-                <Route path="/Review">
-                    <Review foods={foods} drinks={drinks} desserts={desserts}/>
-                </Route>
-            </Switch>
+                    <Route path="/Review">
+                        <Review foods={foods} drinks={drinks} desserts={desserts}/>
+                    </Route>
+                </Switch>
             </div>
         </Router>
     );

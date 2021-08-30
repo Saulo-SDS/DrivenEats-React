@@ -181,8 +181,6 @@ a {
     text-decoration: none;
 }
 
-
-
 .bottom-bar {
     position: fixed;
     width: 100%;
@@ -226,7 +224,7 @@ a {
 
 .box {
     width: 90%;
-    height: 55%;
+    min-height: 60%;
     background-color: #50D074;
     display: flex;
     flex-direction: column;
